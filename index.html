@@ -6,7 +6,10 @@
   <title>Kerzenstudio Hannah</title>
   <meta name="description" content="Handgegossene Kerzen aus Sojawachs. Clean, hochwertig, modern.">
   <style>
-    :root{
+   :root{
+  --max: 1120px;
+  --r: 18px;
+
   --bg: #181818;
   --panel:#17171a;
   --panel2:#1f1f23;
@@ -16,7 +19,9 @@
 
   --line:rgba(255,255,255,.08);
 
-  --accent:#c6a96b;  
+  --accent:#c6a96b;
+  --gold: var(--accent);
+
   --cream:#e9dfd0;
   --onCream:#111;
 }
@@ -24,15 +29,28 @@
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0;
-      font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
-      background:
-        radial-gradient(1200px 700px at 70% 5%, rgba(214,179,106,.12), transparent 60%),
-        radial-gradient(900px 600px at 10% 40%, rgba(255,255,255,.05), transparent 55%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn, .cta{
+  transition: background .2s ease, border-color .2s ease, transform .2s ease, filter .2s ease;
+}
+
+.btn:hover, .cta:hover{
+  transform: translateY(-1px);
+}
+
+.btn:active, .cta:active{
+  transform: translateY(0px);
+}
+
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline: 2px solid rgba(198,169,107,.55);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 80px}
 
@@ -60,13 +78,30 @@
       white-space:nowrap;
     }
     .mark{
-      width:34px; height:34px;
-      border-radius:50%;
-      border:1px solid rgba(214,179,106,.55);
-      display:grid; place-items:center;
-      background: radial-gradient(circle at 30% 30%, rgba(214,179,106,.22), transparent 60%);
-      font-size:13px;
-    }
+  width:34px; height:34px;
+  border-radius:50%;
+  border:1px solid rgba(214,179,106,.55);
+  display:grid; place-items:center;
+  background: radial-gradient(circle at 30% 30%, rgba(214,179,106,.22), transparent 60%);
+  font-size:13px;
+  position:relative;
+  font-weight:700;
+}
+
+.mark::after{
+  content:"";
+  position:absolute;
+  top:6px;
+  right:9px;
+  width:6px;
+  height:6px;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  background: rgba(198,169,107,.95);
+  filter: blur(.1px);
+  opacity:.9;
+}
+
     .links{
       display:flex; gap:16px;
       color:var(--muted);
@@ -262,16 +297,20 @@
       background:rgba(255,255,255,.03);
     }
     .prodImg{
-      height:190px;
-      background:
-        linear-gradient(135deg, rgba(214,179,106,.16), transparent 55%),
-        radial-gradient(320px 220px at 30% 30%, rgba(255,255,255,.10), transparent 65%),
-        #141418;
-      border-bottom:1px solid var(--line);
-      display:flex; align-items:center; justify-content:center;
-      color:#7b7b85;
-      font-size:13px;
-    }
+  height:190px;
+  background:
+    linear-gradient(135deg, rgba(214,179,106,.16), transparent 55%),
+    radial-gradient(320px 220px at 30% 30%, rgba(255,255,255,.10), transparent 65%),
+    var(--img, #141418);
+  background-size: cover;
+  background-position: center;
+  border-bottom:1px solid var(--line);
+  display:flex; align-items:flex-end; justify-content:flex-start;
+  padding:12px 14px;
+  color:rgba(243,243,243,.85);
+  font-size:12px;
+  letter-spacing:.3px;
+}
     .prodName{margin:0 0 6px; font-size:16px}
     .prodDesc{margin:0 0 10px; color:var(--muted); font-size:14px}
     .metaRow{
