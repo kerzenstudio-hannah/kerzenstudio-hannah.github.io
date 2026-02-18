@@ -66,8 +66,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 80px}
 
-    /* Nav */
-    .nav{
+  .nav{
       position:sticky;
       top:14px;
       z-index:20;
@@ -78,9 +77,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
       padding:12px 14px;
       border:1px solid var(--line);
       border-radius:999px;
-      background:rgba(18,18,22,.70);
-      backdrop-filter: blur(10px);
+      background: rgba(251,247,240,.72);
+      backdrop-filter: blur(8px);
     }
+    
     .brand{
       display:flex; align-items:center; gap:10px;
       font-weight:650;
@@ -153,12 +153,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
       .hero{grid-template-columns:1fr}
     }
     .panel{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(18,18,22,.65);
-      backdrop-filter: blur(10px);
-      overflow:hidden;
-    }
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: rgba(251,247,240,.86);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(20,18,16,.06);
+}
     .heroLeft{ padding:34px }
     .kicker{
       display:inline-flex;
@@ -215,7 +216,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
   color: var(--onCream);
   border: 1px solid rgba(255,255,255,0);
     }
-    .btnGold:hover{ filter:brightness(.98) }
+   .btnGold{
+  background: #161514;
+  color: #fbf7f0;
+  border: 1px solid rgba(185,150,85,.40);
+}
+.btnGold:hover{ filter:brightness(1.05) }
 
     .trust{
       margin-top:18px;
@@ -289,12 +295,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
     @media (max-width: 1000px){
       .grid{grid-template-columns:1fr}
     }
-    .card{
-      border:1px solid var(--line);
-      border-radius:var(--r);
-      background:rgba(18,18,22,.55);
-      overflow:hidden;
-    }
+  .card{
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  background: rgba(251,247,240,.92);
+  overflow:hidden;
+  box-shadow: 0 10px 30px rgba(20,18,16,.06);
+}
     .cardBody{padding:16px}
     .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px}
     .tag{
