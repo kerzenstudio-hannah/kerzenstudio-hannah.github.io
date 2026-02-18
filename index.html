@@ -7,17 +7,19 @@
   <meta name="description" content="Handgegossene Kerzen aus Sojawachs. Clean, hochwertig, modern.">
   <style>
     :root{
-      --bg:#0b0b0c;
-      --panel:#121216;
-      --panel2:#16161b;
-      --text:#f4f4f5;
-      --muted:#b5b5bf;
-      --line:rgba(255,255,255,.10);
-      --gold:#d6b36a;
-      --cream:#f2e6d8;
-      --max:1120px;
-      --r:18px;
-    }
+  --bg:#0b0b0c;          /* Hintergrund */
+  --panel:#121216;       /* Flächen / Karten */
+  --panel2:#16161b;      /* etwas heller für Abwechslung */
+
+  --text:#f4f4f5;        /* normaler Text */
+  --muted:#b5b5bf;       /* grauer Text */
+
+  --line:rgba(255,255,255,.10);  /* Linien / Rahmen */
+
+  --accent:#d6b36a;      /* Gold Akzent */
+  --cream:#f2e6d8;       /* Cream für den Hauptbutton */
+  --onCream:#111;        /* Textfarbe auf Cream */
+}
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -162,9 +164,9 @@
     }
     .btn:hover{background:rgba(255,255,255,.12)}
     .btnGold{
-      background:var(--cream);
-      color:#111;
-      border:1px solid rgba(255,255,255,.0);
+  background: var(--cream);
+  color: var(--onCream);
+  border: 1px solid rgba(255,255,255,0);
     }
     .btnGold:hover{ filter:brightness(.98) }
 
