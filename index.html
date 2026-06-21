@@ -1,712 +1,817 @@
+
+```html
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kerzenstudio Hannah</title>
-  <meta name="description" content="Handgegossene Kerzen aus Sojawachs. Clean, hochwertig, modern.">
+  <meta name="description" content="Handgegossene Kerzen & Kerzensträuße aus Sojawachs. Kleines Studio aus Erfurt.">
   <style>
-.slider{
-  position: relative;
-  overflow: hidden;
-}
-
-.slides{
-  display: flex;
-  transition: transform .4s ease;
-}
-
-.slides img{
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.slider button{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,.6);
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-}
-
-.prev{ left: 8px; }
-.next{ right: 8px; }
-
-.slider button:hover{
-  background: rgba(255,255,255,.9);
-}
-    .card{
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 45px rgba(20,18,16,.12);
-  border-color: rgba(185,150,85,.35);
-}
-   :root{
-  --max: 1120px;
-  --r: 18px;
-
-  /* Warm luxe base */
-  --bg: #f4efe6;        /* cremiger Hintergrund */
-  --panel: #fbf7f0;     /* Kartenfläche */
-  --panel2: #f1eadf;    /* leichte Absetzung */
-
-  --text: #151515;      /* nicht komplett schwarz, wirkt weicher */
-  --muted: #6f6a63;     /* warmes Grau */
-
-  --line: rgba(20, 18, 16, .10);  /* warme Konturen statt weiß */
-
-  --accent: #b99655;    /* Gold, aber nicht gelb */
-  --gold: var(--accent);
-
-  --cream: #151515;     /* Button Gold nutzt jetzt dunklen Text */
-  --onCream: #fbf7f0;   /* und helle Schrift auf dunklen Buttons */
-}
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-  margin:0;
-  font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
-  background:
-    radial-gradient(1200px 700px at 70% 5%, rgba(185,150,85,.18), transparent 60%),
-    radial-gradient(900px 600px at 10% 40%, rgba(255,255,255,.55), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,.55), rgba(244,239,230,1)),
-    var(--bg);
-  color:var(--text);
-  line-height:1.6;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.btn, .cta{
-  transition: background .2s ease, border-color .2s ease, transform .2s ease, filter .2s ease;
-}
-
-.btn:hover, .cta:hover{
-  transform: translateY(-1px);
-}
-
-.btn:active, .cta:active{
-  transform: translateY(0px);
-}
-
-a:focus-visible, button:focus-visible, summary:focus-visible{
-  outline: 2px solid rgba(198,169,107,.55);
-  outline-offset: 3px;
-  border-radius: 10px;
-}
-
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 80px}
-
-  .nav{
-      position:sticky;
-      top:14px;
-      z-index:20;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:12px 14px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background: rgba(251,247,240,.72);
-      backdrop-filter: blur(8px);
-    }
-    
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:650;
-      letter-spacing:.6px;
-      text-transform:uppercase;
-      font-size:12px;
-      white-space:nowrap;
-    }
-    .mark{
-  width:34px; height:34px;
-  border-radius:50%;
-  border:1px solid rgba(214,179,106,.55);
-  display:grid; place-items:center;
-  background: radial-gradient(circle at 30% 30%, rgba(214,179,106,.22), transparent 60%);
-  font-size:13px;
-  position:relative;
-  font-weight:700;
-}
-
-.mark::after{
-  content:"";
-  position:absolute;
-  top:6px;
-  right:9px;
-  width:6px;
-  height:6px;
-  border-radius: 0 50% 50% 50%;
-  transform: rotate(45deg);
-  background: rgba(198,169,107,.95);
-  filter: blur(.1px);
-  opacity:.9;
-}
-
-    .links{
-      display:flex; gap:16px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .links a{ text-decoration:none }
-    .links a:hover{ color:var(--text) }
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(214,179,106,.55);
-      background:rgba(214,179,106,.12);
-      text-decoration:none;
-      font-weight:650;
-      font-size:13px;
-      white-space:nowrap;
-    }
-    .cta:hover{ background:rgba(214,179,106,.18) }
-
-    @media (max-width: 860px){
-      .links{display:none}
+    :root {
+      --bg: #f4efe6;
+      --panel: #fbf7f0;
+      --panel2: #f1eadf;
+      --text: #151515;
+      --muted: #6f6a63;
+      --line: rgba(20,18,16,.10);
+      --gold: #b99655;
+      --gold-light: rgba(185,150,85,.15);
+      --gold-border: rgba(185,150,85,.35);
+      --r: 18px;
+      --max: 1100px;
     }
 
-    /* Hero */
-    .hero{
-      margin-top:26px;
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-    }
-    .panel{
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  background: rgba(251,247,240,.86);
-  backdrop-filter: blur(6px);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(20,18,16,.06);
-}
-    .heroLeft{ padding:34px }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      color:var(--muted);
-      font-size:13px;
-      border:1px solid var(--line);
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.03);
-    }
-    .dot{
-      width:8px; height:8px; border-radius:50%;
-      background:var(--gold);
-      box-shadow:0 0 18px rgba(214,179,106,.45);
-    }
-    h1{
-      margin:16px 0 10px;
-      font-size:46px;
-      line-height:1.05;
-      letter-spacing:.2px;
-    }
-    @media (max-width: 900px){
-      h1{font-size:38px}
-    }
-    .sub{
-      color:var(--muted);
-      max-width:60ch;
-      margin:0 0 18px;
-      font-size:16px;
-    }
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:8px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 16px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:650;
-      font-size:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.08);
-    }
-    .btn:hover{background:rgba(255,255,255,.12)}
-    .btnGold{
-  background: var(--cream);
-  color: var(--onCream);
-  border: 1px solid rgba(255,255,255,0);
-    }
-   .btnGold{
-  background: #161514;
-  color: #fbf7f0;
-  border: 1px solid rgba(185,150,85,.40);
-}
-.btnGold:hover{ filter:brightness(1.05) }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-    .trust{
-      margin-top:18px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .trust span{
-      display:inline-flex; gap:8px; align-items:center;
-    }
-    .trust i{
-      width:18px; height:18px;
-      border-radius:6px;
-      border:1px solid var(--line);
-      display:inline-grid; place-items:center;
-      font-style:normal;
-      color:var(--gold);
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 70% 5%, rgba(185,150,85,.15), transparent 60%),
+        radial-gradient(900px 600px at 10% 40%, rgba(255,255,255,.5), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.5), var(--bg)),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .heroRight{
-      display:grid;
-      grid-template-rows: 1fr auto;
-    }
-  .heroImg{
-  min-height:280px;
-  background:
-    linear-gradient(135deg, rgba(185,150,85,.15), transparent 45%),
-    radial-gradient(420px 260px at 30% 30%, rgba(255,255,255,.4), transparent 60%),
-    url("kerzenstrauss.jpg");
-  background-size:cover;
-  background-position:center;
-  border-bottom:1px solid var(--line);
-}
-    .heroNote{
-      padding:18px 20px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .heroNote b{color:var(--text); font-weight:650}
+    a { color: inherit; text-decoration: none; }
 
-    /* Sections */
-    .section{
-      margin-top:36px;
-      padding-top:12px;
-    }
-    .head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:14px;
-    }
-    h2{
-      margin:0;
-      font-size:22px;
-      letter-spacing:.2px;
-    }
-    .hint{
-      color:var(--muted);
-      font-size:13px;
+    .nav-wrap {
+      padding: 14px 18px 0;
+      position: sticky;
+      top: 10px;
+      z-index: 50;
     }
 
-    /* Cards grid */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:16px;
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(251,247,240,.80);
+      backdrop-filter: blur(10px);
     }
-    @media (max-width: 1000px){
-      .grid{grid-template-columns:1fr}
-    }
-  .card{
-  border:1px solid var(--line);
-  border-radius:var(--r);
-  background: rgba(251,247,240,.92);
-  overflow:hidden;
-  box-shadow: 0 10px 30px rgba(20,18,16,.06);
-}
-    .cardBody{padding:16px}
-    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px}
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:7px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
-      background:rgba(255,255,255,.03);
-    }
-    .prodImg{
-  height:190px;
-  background:
-    linear-gradient(135deg, rgba(214,179,106,.16), transparent 55%),
-    radial-gradient(320px 220px at 30% 30%, rgba(255,255,255,.10), transparent 65%),
-    var(--img, #141418);
-  background-size: cover;
-  background-position: center;
-  border-bottom:1px solid var(--line);
-  display:flex; align-items:flex-end; justify-content:flex-start;
-  padding:12px 14px;
-  color:rgba(243,243,243,.85);
-  font-size:12px;
-  letter-spacing:.3px;
-}
-    .prodName{margin:0 0 6px; font-size:16px}
-    .prodDesc{margin:0 0 10px; color:var(--muted); font-size:14px}
-    .metaRow{
-      display:flex; gap:10px; flex-wrap:wrap;
-      color:var(--muted); font-size:13px;
-      margin-bottom:12px;
-    }
-    .price{
-      font-weight:750;
-      letter-spacing:.2px;
-      margin:0 0 12px;
-    }
-    .buyRow{display:flex; gap:10px; flex-wrap:wrap}
-    .buyRow .btn{border-radius:12px}
-    .ghost{
-      background:transparent;
-      border:1px solid rgba(214,179,106,.45);
-      color:var(--text);
-    }
-    .ghost:hover{background:rgba(214,179,106,.10)}
 
-    /* About + FAQ */
-    .twoCol{
-      display:grid;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .flame-mark {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-border);
+      background: radial-gradient(circle at 35% 35%, rgba(214,179,106,.25), transparent 65%);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--gold-border);
+      background: var(--gold-light);
+      font-size: 12.5px;
+      font-weight: 650;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+
+    .nav-cta:hover { background: rgba(185,150,85,.25); }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+
+    .hero {
+      margin-top: 28px;
+      padding: 48px 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: rgba(251,247,240,.82);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(20,18,16,.05);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 680px) {
+      .hero { grid-template-columns: 1fr; padding: 30px 22px; }
+      .hero-badge { display: none; }
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px rgba(185,150,85,.5);
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.06;
+      letter-spacing: -.3px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 680px) { h1 { font-size: 34px; } }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 48ch;
+      margin-bottom: 12px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .hero-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 22px 26px;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--r);
+      background: rgba(185,150,85,.08);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .hero-badge .big { font-size: 32px; font-weight: 700; color: var(--gold); }
+    .hero-badge .small { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 650;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.6);
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s, background .15s;
+    }
+
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(20,18,16,.08); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-gold {
+      background: #8a6a2a;
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn-gold:hover { background: #6e5220; }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--gold-border);
+      color: var(--text);
+    }
+
+    .section { margin-top: 56px; }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -.1px;
+    }
+
+    .section-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .divider {
+      margin-top: 64px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .divider-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(251,247,240,.8);
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: rgba(251,247,240,.86);
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(20,18,16,.05);
+      transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(20,18,16,.10);
+      border-color: var(--gold-border);
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, var(--panel2) 0%, rgba(185,150,85,.12) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .4px;
+    }
+
+    .img-placeholder .ph-icon { font-size: 28px; opacity: .5; }
+    .img-placeholder.tall { height: 280px; }
+
+    .card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .status-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+    .status-available { background: rgba(60,180,80,.10); color: #2a7a3a; }
+    .status-available .status-dot { background: #3cb450; }
+
+    .status-request { background: rgba(185,150,85,.12); color: #7a5f20; }
+    .status-request .status-dot { background: var(--gold); }
+
+    .card-body { padding: 18px 20px 20px; }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .tag {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: rgba(255,255,255,.5);
+    }
+
+    .prod-name { font-size: 17px; font-weight: 700; margin-bottom: 6px; line-height: 1.2; }
+    .prod-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.5; }
+
+    .meta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .meta-row span { opacity: .75; }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .price { font-size: 20px; font-weight: 700; letter-spacing: -.2px; }
+    .card-actions { display: flex; gap: 8px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .gallery-item {
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: rgba(251,247,240,.86);
+      overflow: hidden;
+      transition: transform .18s, border-color .18s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-border);
+    }
+
+    .gallery-caption { padding: 12px 14px 14px; }
+    .gallery-name { font-size: 14px; font-weight: 650; margin-bottom: 4px; }
+    .gallery-desc { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+
+    .contact-grid {
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap:16px;
+      gap: 18px;
     }
-    @media (max-width: 900px){ .twoCol{grid-template-columns:1fr} }
-    .box{ padding:18px }
-    .box p{margin:8px 0 0; color:var(--muted); font-size:14px}
-    details{
-      border-top:1px solid var(--line);
-      padding:12px 0;
-    }
-    details:first-of-type{border-top:none}
-    summary{
-      cursor:pointer;
-      font-weight:650;
-      list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    .faq p{margin:8px 0 0; color:var(--muted); font-size:14px}
 
-    /* Footer */
-    footer{
-      margin-top:46px;
-      border-top:1px solid var(--line);
-      padding:24px 0 0;
-      color:var(--muted);
-      font-size:13px;
-      text-align:center;
+    @media (max-width: 620px) {
+      .contact-grid { grid-template-columns: 1fr; }
     }
-    .footLinks{
-      display:flex; justify-content:center; gap:14px; flex-wrap:wrap;
-      margin-top:10px;
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: rgba(251,247,240,.86);
+      backdrop-filter: blur(4px);
+      padding: 24px 26px;
     }
-    .footLinks a{color:var(--muted); text-decoration:none}
-    .footLinks a:hover{color:var(--text)}
+
+    .panel h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+    .panel p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    .panel a { color: var(--gold); border-bottom: 1px solid var(--gold-border); }
+
+    .form-group { margin-bottom: 14px; }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 650;
+      letter-spacing: .3px;
+      color: var(--muted);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,.6);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--gold-border); }
+
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .about-text {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 72ch;
+    }
+
+    footer {
+      margin-top: 72px;
+      padding: 24px 0 32px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .foot-links { display: flex; gap: 16px; }
+    .foot-links a:hover { color: var(--text); }
   </style>
 </head>
 <body>
 
-  <div class="wrap">
-
-    <div class="nav">
-      <div class="brand">
-        <div class="mark">H</div>
-        Kerzenstudio Hannah
-      </div>
-      <div class="links">
-        <a href="#shop">Shop</a>
-        <a href="#sets">Sets</a>
-        <a href="#about">Über</a>
-        <a href="#faq">FAQ</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-      <a class="cta" href="#shop">Zum Shop</a>
+<div class="nav-wrap">
+  <nav>
+    <div class="brand">
+      <div class="flame-mark">🕯</div>
+      Kerzenstudio Hannah
     </div>
-
-    <section class="hero">
-      <div class="panel heroLeft">
-        <div class="kicker"><span class="dot"></span> Nachhaltig gedacht · Mit Sorgfalt gemacht</div>
-        <h1>Kleine Chargen. Große Wirkung.</h1>
-        <p class="sub">
-          Handgegossene Kerzen aus nachhaltigem Sojawachs.
-          Ruhig im Design, klar im Duft und gemacht für echte Wohlfühlmomente.
-          In kleinen Chargen gefertigt und und mit viel Aufmerksamkeit für Details vollendet.
-        </p>
-        <div class="actions">
-          <a class="btn btnGold" href="#shop">Jetzt shoppen</a>
-          <a class="btn" href="#about">Mehr zur Marke</a>
-          <a class="btn ghost" href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">Instagram</a>
-        </div>
-        <div class="trust">
-          <span><i>✓</i> Veganes, nachhaltiges Sojawachs</span>
-          <span><i>✓</i> Wiederverwendbare, zeitlose Gefäße</span>
-          <span><i>✓</i> Längere Brenndauer & sauberes Flammenbild</span>
-        </div>
-      </div>
-
-      <div class="panel heroRight">
-        <div class="heroImg" aria-label="Kerzen Foto"></div>
-        <div class="heroNote">
-          <b>Neu:</b> Sojawachs Kerzensträuße
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="shop">
-      <div class="head">
-        <h2>Produkte</h2>
-      </div>
-
-      <div class="grid">
-
-        <div class="card">
-          <div class="prodImg slider">
-  <div class="slides">
-    <img src="espresso1.jpg" alt="Espresso Mini">
-    <img src="espresso2.jpg" alt="Espresso Mini Detail">
-    <img src="espresso3.jpg" alt="Espresso Mini Close">
-  </div>
-  <button class="prev">‹</button>
-  <button class="next">›</button>
+    <div class="nav-links">
+      <a href="#verfuegbar">Verfügbar</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <a class="nav-cta" href="#kontakt">Anfragen →</a>
+  </nav>
 </div>
-          <div class="cardBody">
-            <div class="tagRow">
+
+<div class="wrap">
+
+  <section class="hero">
+    <div>
+      <div class="kicker">
+        <span class="dot"></span>
+        Kleines Studio · Erfurt · Handarbeit
+      </div>
+      <h1>Handgegossene<br>Kerzen & Sträuße</h1>
+      <p class="hero-sub">Jedes Stück einzeln gefertigt aus veganem Sojawachs.</p>
+      <p style="font-size:13.5px; font-weight:700; color:var(--text); margin-bottom:20px; display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid var(--gold-border); border-radius:999px; background:var(--gold-light);">
+        📍 Kein Versand – persönliche Übergabe in & um Erfurt
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#verfuegbar">Was ist verfügbar</a>
+        <a class="btn btn-outline" href="#atelier">Atelier ansehen</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span class="big">🕯</span>
+      <span class="small">100 % Sojawachs</span>
+      <span class="small" style="margin-top:10px">Vegan · Nachhaltig</span>
+    </div>
+  </section>
+
+  <section class="section" id="verfuegbar">
+    <div class="section-head">
+      <h2>Bereit zum Abholen</h2>
+      <span class="section-note">Frisch gegossen & direkt zu haben – solange der Vorrat reicht</span>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="img-placeholder">
+          <span class="ph-icon">🕯</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="tags">
               <span class="tag">Warm</span>
               <span class="tag">Coffee · Vanille</span>
             </div>
-            <h3 class="prodName">Espresso Mini</h3>
-            <p class="prodDesc">Vollmundiger Kaffeegeruch mit sanfter Note. Wie ein frischer Espresso am Morgen – so espresso yourself!.</p>
-            <div class="metaRow">
-            <span>ca. 70 g</span><span>ca. 15 h</span><span>100% Sojawachs</span>
-</div>
-<p class="price">5,90 €</p>
-            <div class="buyRow">
-              <a class="btn btnGold"
-   href="https://paypal.me/nachhilfeHR/5.90"
-   target="_blank"
-   rel="noopener noreferrer">
-   Jetzt kaufen
-</a>
-              <a class="btn" href="#kontakt">Fragen</a>
+            <span class="status status-available">
+              <span class="status-dot"></span>
+              Verfügbar
+            </span>
+          </div>
+          <div class="prod-name">Espresso Mini</div>
+          <p class="prod-desc">Vollmundiger Kaffeegeruch mit sanfter Vanillenote. Wie ein frischer Espresso am Morgen.</p>
+          <div class="meta-row">
+            <span>ca. 70 g</span>
+            <span>ca. 15 h Brenndauer</span>
+            <span>100 % Sojawachs</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">5,90 €</span>
+            <div class="card-actions">
+              <a class="btn btn-gold" href="#kontakt">Interesse</a>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="card">
-         <div class="prodImg slider">
-  <div class="slides">
-    <img src="espresso1.jpg" alt="Espresso Mini">
-    <img src="espresso2.jpg" alt="Espresso Mini Detail">
-    <img src="espresso3.jpg" alt="Espresso Mini Close">
+      <div class="card">
+        <div class="img-placeholder">
+          <span class="ph-icon">💐</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="tags">
+              <span class="tag">Limited</span>
+              <span class="tag">Handarbeit</span>
+            </div>
+            <span class="status status-available">
+              <span class="status-dot"></span>
+              Verfügbar
+            </span>
+          </div>
+          <div class="prod-name">Kerzenstrauß Sommeredition</div>
+          <p class="prod-desc">Handgefertigter Strauß aus Sojawachs. Dezent duftend, dekorativ – ein echtes Statement als Geschenk.</p>
+          <div class="meta-row">
+            <span>Limited Edition</span>
+            <span>Handarbeit</span>
+            <span>Nachhaltig</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">49,00 €</span>
+            <div class="card-actions">
+              <a class="btn btn-gold" href="#kontakt">Interesse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-placeholder">
+          <span class="ph-icon">✨</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="tags">
+              <span class="tag">Personalisiert</span>
+            </div>
+            <span class="status status-available">
+              <span class="status-dot"></span>
+              Verfügbar
+            </span>
+          </div>
+          <div class="prod-name">Personalisierte Kerze</div>
+          <p class="prod-desc">Wunschfarbe, persönliche Botschaft, individueller Duft. Ideal für Geburtstage und besondere Momente.</p>
+          <div class="meta-row">
+            <span>Sojawachs</span>
+            <span>Farbe wählbar</span>
+            <span>Botschaft wählbar</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">15,00 €</span>
+            <div class="card-actions">
+              <a class="btn btn-gold" href="#kontakt">Interesse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-label">
+      <span>🕯</span>
+      Atelier & Galerie
+    </div>
+    <div class="divider-line"></div>
   </div>
-  <button class="prev">‹</button>
-  <button class="next">›</button>
-</div>
-          <div class="cardBody">
-            <div class="tagRow">
-              <span class="tag">Frisch</span>
-              <span class="tag">Rose</span>
-            </div>
-            <h3 class="prodName">Kerzenstrauß – Sommeredition</h3>
-<p class="prodDesc">Ein handgefertigter Kerzenstrauß aus Sojawachs in sommerlicher Farbwelt. Dezent Duftend, dekorativ und als Geschenk ein echtes Statement.</p>
-<div class="metaRow">
-  <span>Limited Edition</span><span>Handarbeit</span><span>nachhaltig</span>
-</div>
-<p class="price">49,00 €</p>
-            <div class="buyRow">
-              <a class="btn btnGold" href="#">Jetzt kaufen</a>
-              <a class="btn" href="#kontakt">Fragen</a>
-            </div>
-          </div>
+
+  <section class="section" id="atelier">
+    <div class="section-head">
+      <h2>Mein Atelier</h2>
+      <span class="section-note">Bereits verkauft und auf Anfrage neu herstellbar – schau dich um</span>
+    </div>
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <div class="img-placeholder tall">
+          <span class="ph-icon">🍹</span>
+          <span>Foto folgt</span>
         </div>
-
-        <div class="card">
-          <div class="prodImg slider">
-  <div class="slides">
-    <img src="espresso1.jpg" alt="Espresso Mini">
-    <img src="espresso2.jpg" alt="Espresso Mini Detail">
-    <img src="espresso3.jpg" alt="Espresso Mini Close">
-  </div>
-  <button class="prev">‹</button>
-  <button class="next">›</button>
-</div>
-          <div class="cardBody">
-            <div class="tagRow">
-              <span class="tag">Duft wählbar</span>
-            </div>
-          <h3 class="prodName">Personalisierte Kerze</h3>
-<p class="prodDesc">Kerze in Wunschfarbe mit persönlicher Botschaft. Ideal für Geburtstage, kleine Aufmerksamkeiten oder besondere Momente.</p>
-<div class="metaRow">
-  <span>Sojawachs</span><span>Farbe wählbar</span><span>Botschaft wählbar</span>
-</div>
-<p class="price">15,00 €</p>
-            <div class="buyRow">
-              <a class="btn btnGold" href="#">Jetzt kaufen</a>
-              <a class="btn" href="#kontakt">Fragen</a>
-            </div>
+        <div class="gallery-caption">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span class="gallery-name">Drink-Kerze „Mojito"</span>
+            <span class="status status-request">
+              <span class="status-dot"></span>
+              Auf Anfrage
+            </span>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="sets">
-      <div class="head">
-        <h2>Sets & Geschenke</h2>
-      </div>
-
-      <div class="twoCol">
-        <div class="panel box">
-          <div class="tag">Bestseller</div>
-          <h3 style="margin:10px 0 6px">Mini Set (3er)</h3>
-          <p>3 kleine Gläser, 3 Duftwelten. Perfekt zum Testen oder Verschenken.</p>
-          <p class="price" style="margin-top:12px">ab 29,90 €</p>
-          <div class="actions" style="margin-top:6px">
-            <a class="btn btnGold" href="#">Zum Set</a>
-            <a class="btn" href="#kontakt">Individuell zusammenstellen</a>
-          </div>
-        </div>
-
-        <div class="panel box">
-          <div class="tag">Gift-ready</div>
-          <h3 style="margin:10px 0 6px">Geschenkverpackung</h3>
-          <p>Neutral, hochwertig, ohne Kitsch. Karte mit kurzer Message optional.</p>
-          <p class="price" style="margin-top:12px">+ 2,90 €</p>
-          <div class="actions" style="margin-top:6px">
-            <a class="btn btnGold" href="#kontakt">Dazu buchen</a>
-            <a class="btn" href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">Über Insta anfragen</a>
-          </div>
+          <p class="gallery-desc">Kerze in Glasform, täuschend echt. Ein echter Hingucker und Gesprächsstarter.</p>
+          <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="about">
-      <div class="head">
-        <h2>Über Kerzenstudio Hannah</h2>
+      <div class="gallery-item">
+        <div class="img-placeholder tall">
+          <span class="ph-icon">💐</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="gallery-caption">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span class="gallery-name">Kerzenstrauß Herbst</span>
+            <span class="status status-request">
+              <span class="status-dot"></span>
+              Auf Anfrage
+            </span>
+          </div>
+          <p class="gallery-desc">Warme Erdtöne, rustikale Struktur. Bereits verkauft – auf Anfrage neu herstellbar.</p>
+          <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
+        </div>
       </div>
 
-      <div class="panel box">
-        <p style="margin:0; color:var(--muted); font-size:14px">
-          Kerzenstudio Hannah ist ein kleines, unabhängiges Studio für handgegossene Kerzen. Entstanden ist es aus echter Begeisterung für hochwertige Materialien, ruhiges Design und die Freude daran, mit den eigenen Händen etwas Bleibendes zu schaffen. Die positive Resonanz aus dem nahen Umfeld war schließlich der Impuls, aus einer persönlichen Leidenschaft ein kleines Label zu entwickeln. Gefertigt wird in kleinen Chargen und mit bewusstem Tempo. Hier geht es nicht um schnelle Produktion, sondern um Sorgfalt in jedem einzelnen Schritt. Jede Duftkomposition wird abgestimmt, jedes Glas ausgewählt, jeder Docht passend eingesetzt. Qualität steht klar vor Quantität. Verarbeitet wird ausschließlich veganes, nachhaltiges Sojawachs. Dieses wird aus nachwachsenden Rohstoffen gewonnen, ist biologisch abbaubar und frei von tierischen Bestandteilen. Im Vergleich zu vielen herkömmlichen Wachsen brennt Sojawachs langsamer und gleichmäßiger, wodurch sich die Brenndauer verlängert. Gleichzeitig entsteht weniger Ruß, das Flammenbild ist ruhiger und der Duft entfaltet sich sauber und gleichmäßig im Raum. Auch die Behältnisse sind bewusst gewählt. Zeitlos im Design, langlebig und wiederverwendbar. Nach dem Abbrennen lassen sie sich weiterverwenden und werden so Teil eines nachhaltigen Kreislaufs. Kerzenstudio Hannah steht für Handarbeit, Unikate, Ruhe und Qualität. Keine Massenware, sondern jedes einzelne Stück mit Sorgfalt gefertigt.
+      <div class="gallery-item">
+        <div class="img-placeholder tall">
+          <span class="ph-icon">🕯</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="gallery-caption">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span class="gallery-name">Kerzen-Set „Nordic"</span>
+            <span class="status status-request">
+              <span class="status-dot"></span>
+              Auf Anfrage
+            </span>
+          </div>
+          <p class="gallery-desc">Schlichte Stabkerzen in gedämpften Tönen. Minimalistisch, zeitlos.</p>
+          <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="img-placeholder tall">
+          <span class="ph-icon">🎁</span>
+          <span>Foto folgt</span>
+        </div>
+        <div class="gallery-caption">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span class="gallery-name">Geschenkset personalisiert</span>
+            <span class="status status-request">
+              <span class="status-dot"></span>
+              Auf Anfrage
+            </span>
+          </div>
+          <p class="gallery-desc">Kerze + Verpackung + persönliche Karte. Auf Wunsch zusammengestellt.</p>
+          <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="wuensche">
+    <div class="section-head">
+      <h2>Ganz nach deinen Wünschen</h2>
+    </div>
+    <div class="panel" style="display:grid; grid-template-columns: 1fr auto; align-items:center; gap:24px;">
+      <p style="font-size:15px; color:var(--muted); line-height:1.7; margin:0;">Du hast eine Idee im Kopf und ich versuche sie zum Leben zu erwecken. Farbe, Duft, Form, Anlass – sag mir was dir vorschwebt und ich schaue was ich daraus machen kann.</p>
+      <a class="btn btn-gold" href="#kontakt" style="white-space:nowrap">Wunsch mitteilen</a>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt">
+    <div class="section-head">
+      <h2>Kontakt</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="panel">
+        <h3>Direkt melden</h3>
+        <p>Am schnellsten erreichbar per Instagram:</p>
+        <p><a href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">@kerzenstudio.hannah</a></p>
+        <p style="margin-top:12px">Oder per Mail:</p>
+        <p><a href="mailto:kerzenstudio.hannah@gmail.com">kerzenstudio.hannah@gmail.com</a></p>
+        <p style="margin-top:16px; font-size:13px; opacity:.8">
+          Kein Versand – Abholung in Erfurt oder persönliche Übergabe in der Umgebung auf Anfrage.
         </p>
       </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="head">
-        <h2>FAQ</h2>
-      </div>
-
-      <div class="panel box faq">
-        <details open>
-          <summary>Wie lange brennt eine Kerze?</summary>
-          <p>Kommt auf Größe und Duftölanteil an. Ich schreibe die Brenndauer pro Produkt dazu, sobald die finalen Tests durch sind.</p>
-        </details>
-        <details>
-          <summary>Sojawachs, warum?</summary>
-          <p>Sojawachs ist ein nachwachsender Rohstoff, biologisch abbaubar und frei von tierischen Bestandteilen. Es brennt langsamer und gleichmäßiger als viele herkömmliche Wachse, wodurch sich die Brenndauer verlängert und weniger Ruß entsteht. Für ein ruhiges Flammenbild, eine saubere Raumluft und ein bewusst gewähltes Material.</p>
-        </details>
-        <details>
-          <summary>Kann ich eine Kerze personalisieren?</summary>
-          <p>Ja, sehr gerne. Name, kurze Message oder eine besondere Geschenkidee – jede Kerze kann individuell gestaltet werden. Eine kurze Nachricht über Kontakt oder Instagram genügt.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="section" id="kontakt">
-      <div class="head">
-        <h2>Kontakt</h2>
-      </div>
-
-      <div class="twoCol">
-        <div class="panel box">
-          <h3 style="margin:0 0 8px">Schnellster Weg</h3>
-          <p>Instagram DM: <a href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">@kerzenstudio.hannah</a></p>
-          <p style="margin-top:10px">Oder per Mail: <a href="mailto:kerzenstudio.hannah@gmail.com">kerzenstudio.hannah@gmail.com</a></p>
+      <div class="panel">
+        <h3>Nachricht schicken</h3>
+        <div class="form-group">
+          <label>Dein Name</label>
+          <input type="text" placeholder="z.B. Laura">
         </div>
-        <div class="panel box">
-          <h3 style="margin:0 0 8px">Für Bestellungen</h3>
+        <div class="form-group">
+          <label>E-Mail oder Instagram</label>
+          <input type="text" placeholder="damit ich dir antworten kann">
         </div>
+        <div class="form-group">
+          <label>Worum geht es?</label>
+          <select>
+            <option value="">Bitte wählen …</option>
+            <option>Ich interessiere mich für ein verfügbares Produkt</option>
+            <option>Ich möchte etwas aus dem Atelier anfragen</option>
+            <option>Ich hätte eine individuelle Idee</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nachricht</label>
+          <textarea placeholder="Was interessiert dich? Welches Produkt? …"></textarea>
+        </div>
+        <button class="btn btn-gold" style="width:100%" onclick="alert('Danke! Diese Funktion wird bald aktiviert. Schreib mir gerne direkt per Instagram oder Mail.')">Nachricht senden</button>
       </div>
-    </section>
-<section class="section" id="impressum">
-  <div class="head">
-    <h2>Impressum</h2>
-  </div>
-  <div class="panel box">
-    <p style="margin:0; color:var(--muted); font-size:14px">
-      Kerzenstudio Hannah<br>
-      Hannah Richter<br>
-      Theo-Neubauer-Str.<br>
-      99085 Erfurt<br><br>
-      E-Mail: kerzenstudio.hannah@gmail.com
-    </p>
-  </div>
-</section>
+    </div>
+  </section>
 
+  <section class="section" id="about">
+    <div class="section-head">
+      <h2>Über das Studio</h2>
+    </div>
+    <div class="panel">
+      <p class="about-text">
+        Kerzenstudio Hannah ist ein kleines, unabhängiges Studio für handgegossene Kerzen aus Erfurt. Entstanden aus echter Begeisterung für hochwertige Materialien, ruhiges Design und die Freude daran, mit den eigenen Händen etwas Bleibendes zu schaffen. Gefertigt wird in kleinen Chargen, mit Sorgfalt und ohne Eile. Verarbeitet wird ausschließlich veganes, nachhaltiges Sojawachs – biologisch abbaubar, länger brennend, mit ruhigerem Flammenbild. Kein Massenprodukt, sondern jedes Stück mit Bedacht gemacht.
+      </p>
+    </div>
+  </section>
 
-    <footer>
-      © 2026 Kerzenstudio Hannah
-      <div class="footLinks">
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-    </footer>
+  <section class="section" id="impressum">
+    <div class="section-head">
+      <h2>Impressum</h2>
+    </div>
+    <div class="panel">
+      <p style="font-size:14px; color:var(--muted); line-height:1.9">
+        Kerzenstudio Hannah<br>
+        Hannah Richter<br>
+        Theo-Neubauer-Str.<br>
+        99085 Erfurt<br><br>
+        E-Mail: <a href="mailto:kerzenstudio.hannah@gmail.com" style="color:var(--gold)">kerzenstudio.hannah@gmail.com</a>
+      </p>
+    </div>
+  </section>
 
-  </div>
-<script>
-document.querySelectorAll(".slider").forEach(slider => {
-  const slides = slider.querySelector(".slides");
-  const images = slides.querySelectorAll("img");
-  const prev = slider.querySelector(".prev");
-  const next = slider.querySelector(".next");
+  <footer>
+    <span>© 2026 Kerzenstudio Hannah</span>
+    <div class="foot-links">
+      <a href="#impressum">Impressum</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">Instagram</a>
+    </div>
+  </footer>
 
-  let index = 0;
-
-  function updateSlide(){
-    slides.style.transform = "translateX(-" + (index * 100) + "%)";
-  }
-
-  next.addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    updateSlide();
-  });
-
-  prev.addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    updateSlide();
-  });
-});
-</script>
+</div>
 </body>
 </html>
