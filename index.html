@@ -37,7 +37,6 @@
 
     a { color: inherit; text-decoration: none; }
 
-    /* ── NAV ── */
     .nav-wrap {
       padding: 14px 18px 0;
       position: sticky;
@@ -108,14 +107,12 @@
       .nav-links { display: none; }
     }
 
-    /* ── WRAP ── */
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
       padding: 32px 18px 80px;
     }
 
-    /* ── HERO ── */
     .hero {
       margin-top: 28px;
       padding: 48px 36px;
@@ -154,27 +151,12 @@
       box-shadow: 0 0 10px rgba(185,150,85,.5);
     }
 
-    h1 {
-      font-size: 44px;
-      line-height: 1.06;
-      letter-spacing: -.3px;
-      margin-bottom: 12px;
-    }
-
+    h1 { font-size: 44px; line-height: 1.06; letter-spacing: -.3px; margin-bottom: 12px; }
     @media (max-width: 680px) { h1 { font-size: 34px; } }
 
-    .hero-sub {
-      font-size: 16px;
-      color: var(--muted);
-      max-width: 48ch;
-      margin-bottom: 24px;
-    }
+    .hero-sub { font-size: 16px; color: var(--muted); max-width: 48ch; margin-bottom: 12px; }
 
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 
     .hero-badge {
       display: flex;
@@ -192,7 +174,6 @@
     .hero-badge .big { font-size: 32px; font-weight: 700; color: var(--gold); }
     .hero-badge .small { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
 
-    /* ── BUTTONS ── */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -210,21 +191,10 @@
     .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(20,18,16,.08); }
     .btn:active { transform: translateY(0); }
 
-    .btn-gold {
-      background: #8a6a2a;
-      color: #fff;
-      border-color: transparent;
-    }
-
+    .btn-gold { background: #8a6a2a; color: #fff; border-color: transparent; }
     .btn-gold:hover { background: #6e5220; }
+    .btn-outline { background: transparent; border-color: var(--gold-border); color: var(--text); }
 
-    .btn-outline {
-      background: transparent;
-      border-color: var(--gold-border);
-      color: var(--text);
-    }
-
-    /* ── SECTION ── */
     .section { margin-top: 56px; }
 
     .section-head {
@@ -234,18 +204,10 @@
       margin-bottom: 24px;
     }
 
-    h2 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -.1px;
-    }
+    h2 { font-size: 26px; font-weight: 700; letter-spacing: -.1px; }
 
-    .section-note {
-      font-size: 13px;
-      color: var(--muted);
-    }
+    .section-note { font-size: 13px; color: var(--muted); }
 
-    /* ── DIVIDER ── */
     .divider {
       margin-top: 64px;
       display: flex;
@@ -253,11 +215,7 @@
       gap: 18px;
     }
 
-    .divider-line {
-      flex: 1;
-      height: 1px;
-      background: var(--line);
-    }
+    .divider-line { flex: 1; height: 1px; background: var(--line); }
 
     .divider-label {
       display: flex;
@@ -275,19 +233,16 @@
       white-space: nowrap;
     }
 
-    /* ── PRODUCT GRID ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 18px;
-      align-items: stretch;
     }
 
     .card {
       border: 1px solid var(--line);
       border-radius: var(--r);
       background: rgba(251,247,240,.86);
-      backdrop-filter: blur(4px);
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(20,18,16,.05);
       transition: transform .18s, box-shadow .18s, border-color .18s;
@@ -301,36 +256,14 @@
       border-color: var(--gold-border);
     }
 
-    /* ── IMAGE PLACEHOLDER ── */
-    .img-placeholder {
-      width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, var(--panel2) 0%, rgba(185,150,85,.12) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: .4px;
-    }
-
-    .img-placeholder .ph-icon { font-size: 28px; opacity: .5; }
-
-    .img-placeholder.tall { height: 280px; }
-
-    /* Real images once added */
     .card-img {
       width: 100%;
-      height: auto;
-      max-height: 320px;
-      object-fit: contain;
+      height: 220px;
+      object-fit: cover;
       display: block;
-      background: var(--panel2);
+      flex-shrink: 0;
     }
 
-    /* ── STATUS BADGE ── */
     .status {
       display: inline-flex;
       align-items: center;
@@ -344,21 +277,17 @@
     }
 
     .status-dot { width: 6px; height: 6px; border-radius: 50%; }
-
-    .status-available {
-      background: rgba(60,180,80,.10);
-      color: #2a7a3a;
-    }
+    .status-available { background: rgba(60,180,80,.10); color: #2a7a3a; }
     .status-available .status-dot { background: #3cb450; }
-
-    .status-request {
-      background: rgba(185,150,85,.12);
-      color: #7a5f20;
-    }
+    .status-request { background: rgba(185,150,85,.12); color: #7a5f20; }
     .status-request .status-dot { background: var(--gold); }
 
-    /* ── CARD BODY ── */
-    .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+    .card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
 
     .card-top {
       display: flex;
@@ -378,19 +307,8 @@
       background: rgba(255,255,255,.5);
     }
 
-    .prod-name {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      line-height: 1.2;
-    }
-
-    .prod-desc {
-      font-size: 13.5px;
-      color: var(--muted);
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
+    .prod-name { font-size: 17px; font-weight: 700; margin-bottom: 6px; line-height: 1.2; }
+    .prod-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.5; flex: 1; }
 
     .meta-row {
       display: flex;
@@ -410,17 +328,12 @@
       gap: 10px;
       flex-wrap: wrap;
       margin-top: auto;
+      padding-top: 12px;
     }
 
-    .price {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -.2px;
-    }
-
+    .price { font-size: 20px; font-weight: 700; letter-spacing: -.2px; }
     .card-actions { display: flex; gap: 8px; }
 
-    /* ── GALLERY GRID ── */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -433,39 +346,22 @@
       background: rgba(251,247,240,.86);
       overflow: hidden;
       transition: transform .18s, border-color .18s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .gallery-item:hover {
-      transform: translateY(-3px);
-      border-color: var(--gold-border);
-    }
+    .gallery-item:hover { transform: translateY(-3px); border-color: var(--gold-border); }
+    .gallery-caption { padding: 12px 14px 14px; }
+    .gallery-name { font-size: 14px; font-weight: 650; margin-bottom: 4px; }
+    .gallery-desc { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
 
-    .gallery-caption {
-      padding: 12px 14px 14px;
-    }
-
-    .gallery-name {
-      font-size: 14px;
-      font-weight: 650;
-      margin-bottom: 4px;
-    }
-
-    .gallery-desc {
-      font-size: 12.5px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    /* ── CONTACT ── */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
 
-    @media (max-width: 620px) {
-      .contact-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 620px) { .contact-grid { grid-template-columns: 1fr; } }
 
     .panel {
       border: 1px solid var(--line);
@@ -479,7 +375,6 @@
     .panel p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .panel a { color: var(--gold); border-bottom: 1px solid var(--gold-border); }
 
-    /* ── CONTACT FORM ── */
     .form-group { margin-bottom: 14px; }
 
     .form-group label {
@@ -509,21 +404,11 @@
 
     .form-group input:focus,
     .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--gold-border);
-    }
-
+    .form-group select:focus { border-color: var(--gold-border); }
     .form-group textarea { resize: vertical; min-height: 90px; }
 
-    /* ── ABOUT ── */
-    .about-text {
-      font-size: 14.5px;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 100%;
-    }
+    .about-text { font-size: 14.5px; color: var(--muted); line-height: 1.75; }
 
-    /* ── FOOTER ── */
     footer {
       margin-top: 72px;
       padding: 24px 0 32px;
@@ -539,73 +424,6 @@
 
     .foot-links { display: flex; gap: 16px; }
     .foot-links a:hover { color: var(--text); }
-
-    /* ── IMPRESSUM ── */
-    #impressum .panel p { line-height: 1.8; }
-
-    /* ── SLIDER ── */
-    .slider-wrap {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      background: var(--panel2);
-      height: 260px;
-    }
-
-    .slider-track {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      transition: transform .35s ease;
-    }
-
-    .slider-track img {
-      min-width: 100%;
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      flex-shrink: 0;
-    }
-
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(251,247,240,.85);
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      width: 32px; height: 32px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px;
-      cursor: pointer;
-      z-index: 2;
-      transition: background .2s;
-    }
-
-    .slider-btn:hover { background: rgba(251,247,240,1); }
-    .slider-btn.prev { left: 8px; }
-    .slider-btn.next { right: 8px; }
-
-    .slider-dots {
-      position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 5px;
-    }
-
-    .slider-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.6);
-      cursor: pointer;
-      transition: background .2s;
-    }
-
-    .slider-dot.active { background: #fff; }
   </style>
 </head>
 <body>
@@ -627,19 +445,13 @@
 
 <div class="wrap">
 
-  <!-- HERO -->
   <section class="hero">
     <div>
-      <div class="kicker">
-        <span class="dot"></span>
-        Kleines Studio · Erfurt · Handarbeit
-      </div>
+      <div class="kicker"><span class="dot"></span>Kleines Studio · Erfurt · Handarbeit</div>
       <h1>Handgegossene<br>Kerzen & Sträuße</h1>
-      <p class="hero-sub">
-        Jedes Stück einzeln gefertigt aus veganem Sojawachs.
-      </p>
-      <p style="font-size:13.5px; font-weight:700; color:var(--text); margin-bottom:20px; display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid var(--gold-border); border-radius:999px; background:var(--gold-light);">
-        &#128205; Kein Versand &ndash; persönliche Übergabe in &amp; um Erfurt
+      <p class="hero-sub">Jedes Stück einzeln gefertigt – mit Liebe, aus Erfurt.</p>
+      <p style="font-size:13.5px;font-weight:700;color:var(--text);margin-bottom:20px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--gold-border);border-radius:999px;background:var(--gold-light);">
+        📍 Kein Versand – persönliche Übergabe in & um Erfurt
       </p>
       <div class="hero-actions">
         <a class="btn btn-gold" href="#verfuegbar">Was ist verfügbar</a>
@@ -648,287 +460,133 @@
     </div>
     <div class="hero-badge">
       <span class="big">🕯</span>
-      <span class="small">100 % Sojawachs</span>
-      <span class="small" style="margin-top:10px">Vegan · Nachhaltig</span>
+      <span class="small">Vegan · Nachhaltig</span>
+      <span class="small" style="margin-top:10px">Handgemacht</span>
     </div>
   </section>
 
-  <!-- VERFÜGBAR -->
   <section class="section" id="verfuegbar">
     <div class="section-head">
-      <h2>Sofort verfügbar</h2>
+      <h2>Bereit zum Abholen</h2>
       <span class="section-note">Frisch gegossen & direkt zu haben – solange der Vorrat reicht</span>
     </div>
-
     <div class="grid">
 
-      <!-- Iced Mango Matcha Latte -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Mango matcha latte.PNG" alt="Iced Mango Matcha Latte"><img src="images/Mango_Matcha_oben.JPG" alt="Iced Mango Matcha Latte"><img src="images/Mango_Matcha_Hinten.JPG" alt="Iced Mango Matcha Latte"><img src="images/Mango_gross.jpeg" alt="Iced Mango Matcha Latte"><img src="images/Mango_klein.jpeg" alt="Iced Mango Matcha Latte"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
+        <img class="card-img" src="images/Mango matcha latte.PNG" alt="Iced Mango Matcha Latte">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Fruchtig</span>
-              <span class="tag">Mango · Matcha</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Fruchtig</span><span class="tag">Mango · Matcha</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Iced Mango Matcha Latte</div>
           <p class="prod-desc">Fruchtig-süßer Mangoduft trifft auf einen leichten Hauch Matcha. Wie ein Sommerdrink zum Anzünden.</p>
-          <div class="meta-row">
-            <span>Lange Brenndauer</span>
-            <span>Angenehm leichter Duft</span>
-            
-          </div>
+          <div class="meta-row"><span>Lange Brenndauer</span><span>Angenehm leichter Duft</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
-              <span class="price">Bundle 25 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div><span class="price">Bundle 25 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
 
-      <!-- Iced Matcha Latte -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Matcha_Latte.PNG" alt="Iced Matcha Latte"><img src="images/Matcha_Latte_gross.jpeg" alt="Iced Matcha Latte"><img src="images/Matcha_Latte_klein.jpeg" alt="Iced Matcha Latte"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Matcha_Latte.PNG" alt="Iced Matcha Latte">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Teeig</span>
-              <span class="tag">Matcha</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Teeig</span><span class="tag">Matcha</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Iced Matcha Latte</div>
           <p class="prod-desc">Erdiger, leicht herber Matchaduft – ruhig, minimalistisch und unglaublich entspannend.</p>
-          <div class="meta-row">
-            <span>Lange Brenndauer</span>
-            <span>Angenehm leichter Duft</span>
-            
-          </div>
+          <div class="meta-row"><span>Lange Brenndauer</span><span>Angenehm leichter Duft</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
-              <span class="price">Bundle 25 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div><span class="price">Bundle 25 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
 
-      <!-- Iced Strawberry Matcha Latte -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Strawberry matcha latte.PNG" alt="Iced Strawberry Matcha Latte"><img src="images/Strawberry_Matcha_gross.jpeg" alt="Iced Strawberry Matcha Latte"><img src="images/Strawberry_Matcha_klein.jpeg" alt="Iced Strawberry Matcha Latte"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Strawberry matcha latte.PNG" alt="Iced Strawberry Matcha Latte">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Fruchtig</span>
-              <span class="tag">Erdbeere · Matcha</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Fruchtig</span><span class="tag">Erdbeere · Matcha</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Iced Strawberry Matcha Latte</div>
           <p class="prod-desc">Süße Erdbeere trifft auf frischen Matcha – fruchtig, verspielt und wunderbar sommerlich.</p>
-          <div class="meta-row">
-            <span>Lange Brenndauer</span>
-            <span>Angenehm leichter Duft</span>
-            
-          </div>
+          <div class="meta-row"><span>Lange Brenndauer</span><span>Angenehm leichter Duft</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
-              <span class="price">Bundle 25 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div><span class="price">Bundle 25 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
 
-      <!-- Iced Caramel Latte -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Iced_Caramel_Latte.PNG" alt="Iced Caramel Latte"><img src="images/Caramel_gross.jpeg" alt="Iced Caramel Latte"><img src="images/Caramel_klein.jpeg" alt="Iced Caramel Latte"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Iced_Caramel_Latte.PNG" alt="Iced Caramel Latte">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Süß</span>
-              <span class="tag">Kaffee · Karamell</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Süß</span><span class="tag">Kaffee · Karamell</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Iced Caramel Latte</div>
           <p class="prod-desc">Süßlicher Kaffeeduft mit einer warmen Karamellnote – gemütlich, verführerisch und unwiderstehlich.</p>
-          <div class="meta-row">
-            <span>Lange Brenndauer</span>
-            <span>Angenehm leichter Duft</span>
-            
-          </div>
+          <div class="meta-row"><span>Lange Brenndauer</span><span>Angenehm leichter Duft</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
-              <span class="price">Bundle 25 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div><span class="price">Bundle 25 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
 
-      <!-- Iced Coffee Latte -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Iced_Coffee_Latte.PNG" alt="Iced Coffee Latte"><img src="images/Iced_Coffee_Latte.JPG" alt="Iced Coffee Latte"><img src="images/Iced_Coffee_Latte_3.JPG" alt="Iced Coffee Latte"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Iced_Coffee_Latte.PNG" alt="Iced Coffee Latte">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Süß</span>
-              <span class="tag">Kaffee</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Süß</span><span class="tag">Kaffee</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Iced Coffee Latte</div>
           <p class="prod-desc">Klassischer süßlicher Kaffeeduft – warm, vertraut und wie ein frischer Latte am Morgen.</p>
-          <div class="meta-row">
-            <span>Lange Brenndauer</span>
-            <span>Angenehm leichter Duft</span>
-            
-          </div>
+          <div class="meta-row"><span>Lange Brenndauer</span><span>Angenehm leichter Duft</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
-              <span class="price">Bundle 25 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div><span class="price">Bundle 25 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
 
-
-      <!-- Teelichter -->
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Teelicht_Uebersicht.jpeg" alt="Teelichter"><img src="images/Teelicht_schwimmend.jpeg" alt="Teelichter"><img src="images/Teelicht1.jpeg" alt="Teelichter"><img src="images/Teelicht2.jpeg" alt="Teelichter"><img src="images/Teelicht3.jpeg" alt="Teelichter"><img src="images/Teelicht4.jpeg" alt="Teelichter"><img src="images/Teelicht5.jpeg" alt="Teelichter"><img src="images/Teelicht6.jpeg" alt="Teelichter"><img src="images/Teelicht7.jpeg" alt="Teelichter"><img src="images/Teelicht8.jpeg" alt="Teelichter"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Teelicht_Uebersicht.jpeg" alt="Teelichter">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Nicht duftend</span>
-              <span class="tag">Schwimmend</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Nicht duftend</span><span class="tag">Schwimmend</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Teelichter</div>
           <p class="prod-desc">Kleine Kunstwerke in vielen Formen und Farben – sie können sogar schwimmen! Nicht duftend, dafür umso dekorativer. Auch in größeren Mengen auf Anfrage erhältlich.</p>
-          <div class="meta-row">
-            <span>Viele Formen & Farben</span>
-            <span>Können schwimmen</span>
-            <span>Auf Anfrage individualisierbar</span>
-          </div>
+          <div class="meta-row"><span>Viele Formen & Farben</span><span>Können schwimmen</span></div>
           <div class="card-footer">
-            <div>
-              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">1 Stück 1,50 € · 5 Stück 6 € · 10 Stück 11 €</div>
-              <span class="price">20 Stück 20 €</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><div style="font-size:12px;color:var(--muted);margin-bottom:2px">1 Stück 1,50 € · 5 Stück 6 € · 10 Stück 11 €</div><span class="price">20 Stück 20 €</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
-      <!-- Geschenkverpackungen -->
+
       <div class="card">
-        <div class="slider-wrap">
-        <div class="slider-track"><img src="images/Geschenkverpackungen.jpeg" alt="Geschenkverpackungen"><img src="images/Geschenkverpackungen2.jpeg" alt="Geschenkverpackungen"></div>
-        <button class="slider-btn prev">&#8249;</button>
-        <button class="slider-btn next">&#8250;</button>
-        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div></div>
-      </div>
-      </div>
+        <img class="card-img" src="images/Geschenkverpackungen.jpeg" alt="Geschenkverpackungen">
         <div class="card-body">
           <div class="card-top">
-            <div class="tags">
-              <span class="tag">Geschenk</span>
-              <span class="tag">Verpackung</span>
-            </div>
-            <span class="status status-available">
-              <span class="status-dot"></span>
-              Verfügbar
-            </span>
+            <div class="tags"><span class="tag">Geschenk</span><span class="tag">Verpackung</span></div>
+            <span class="status status-available"><span class="status-dot"></span>Verfügbar</span>
           </div>
           <div class="prod-name">Geschenkverpackungen</div>
           <p class="prod-desc">Perfekt für besondere Anlässe – deine Kerze kommt liebevoll verpackt und ist direkt verschenkfertig.</p>
-          <div class="meta-row">
-            <span>Verschiedene Designs</span>
-            <span>Ideal zum Verschenken</span>
-          </div>
+          <div class="meta-row"><span>Verschiedene Designs</span><span>Ideal zum Verschenken</span></div>
           <div class="card-footer">
-            <div>
-              <span class="price">1,50 € pro Stück</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-gold" href="#kontakt">Interesse</a>
-            </div>
+            <div><span class="price">1,50 € pro Stück</span></div>
+            <a class="btn btn-gold" href="#kontakt">Interesse</a>
           </div>
         </div>
       </div>
@@ -936,95 +594,49 @@
     </div>
   </section>
 
-  <!-- DIVIDER -->
   <div class="divider">
     <div class="divider-line"></div>
-    <div class="divider-label">
-      <span>🕯</span>
-      Atelier & Galerie
-    </div>
+    <div class="divider-label"><span>🕯</span>Atelier & Galerie</div>
     <div class="divider-line"></div>
   </div>
 
-  <!-- ATELIER -->
   <section class="section" id="atelier">
     <div class="section-head">
       <h2>Mein Atelier</h2>
       <span class="section-note">Bereits verkauft und auf Anfrage neu herstellbar – schau dich um</span>
     </div>
-
     <div class="gallery">
 
-      <!-- Galerie 1 -->
       <div class="gallery-item">
-        <div class="img-placeholder tall">
-          <span class="ph-icon">🍹</span>
-          <span>Foto folgt</span>
-        </div>
+        <div style="height:200px;background:var(--panel2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;">Foto folgt</div>
         <div class="gallery-caption">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
             <span class="gallery-name">Drink-Kerze „Mojito"</span>
-            <span class="status status-request">
-              <span class="status-dot"></span>
-              Auf Anfrage
-            </span>
+            <span class="status status-request"><span class="status-dot"></span>Auf Anfrage</span>
           </div>
           <p class="gallery-desc">Kerze in Glasform, täuschend echt. Ein echter Hingucker und Gesprächsstarter.</p>
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
 
-      <!-- Galerie 2 -->
       <div class="gallery-item">
-        <div class="img-placeholder tall">
-          <span class="ph-icon">💐</span>
-          <span>Foto folgt</span>
-        </div>
+        <div style="height:200px;background:var(--panel2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;">Foto folgt</div>
         <div class="gallery-caption">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <span class="gallery-name">Kerzenstrauß Herbst</span>
-            <span class="status status-request">
-              <span class="status-dot"></span>
-              Auf Anfrage
-            </span>
+            <span class="gallery-name">Kerzenstrauß</span>
+            <span class="status status-request"><span class="status-dot"></span>Auf Anfrage</span>
           </div>
-          <p class="gallery-desc">Warme Erdtöne, rustikale Struktur. Bereits verkauft – auf Anfrage neu herstellbar.</p>
+          <p class="gallery-desc">Handgefertigter Strauß aus Sojawachs – bereits verkauft, auf Anfrage neu herstellbar.</p>
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
 
-      <!-- Galerie 3 -->
       <div class="gallery-item">
-        <div class="img-placeholder tall">
-          <span class="ph-icon">🕯</span>
-          <span>Foto folgt</span>
-        </div>
+        <div style="height:200px;background:var(--panel2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;">Foto folgt</div>
         <div class="gallery-caption">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <span class="gallery-name">Kerzen-Set „Nordic"</span>
-            <span class="status status-request">
-              <span class="status-dot"></span>
-              Auf Anfrage
-            </span>
-          </div>
-          <p class="gallery-desc">Schlichte Stabkerzen in gedämpften Tönen. Minimalistisch, zeitlos.</p>
-          <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
-        </div>
-      </div>
-
-      <!-- Galerie 4 -->
-      <div class="gallery-item">
-        <div class="img-placeholder tall">
-          <span class="ph-icon">🎁</span>
-          <span>Foto folgt</span>
-        </div>
-        <div class="gallery-caption">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <span class="gallery-name">Geschenkset personalisiert</span>
-            <span class="status status-request">
-              <span class="status-dot"></span>
-              Auf Anfrage
-            </span>
+            <span class="gallery-name">Geschenkset</span>
+            <span class="status status-request"><span class="status-dot"></span>Auf Anfrage</span>
           </div>
           <p class="gallery-desc">Kerze + Verpackung + persönliche Karte. Auf Wunsch zusammengestellt.</p>
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
@@ -1032,25 +644,18 @@
       </div>
 
     </div>
-
   </section>
 
-  <!-- WÜNSCHE -->
   <section class="section" id="wuensche">
-    <div class="section-head">
-      <h2>Ganz nach deinen Wünschen</h2>
-    </div>
-    <div class="panel" style="display:grid; grid-template-columns: 1fr auto; align-items:center; gap:24px;">
-      <p style="font-size:15px; color:var(--muted); line-height:1.7; margin:0;">Du hast eine Idee im Kopf und ich versuche sie zum Leben zu erwecken. Farbe, Duft, Form, Anlass – sag mir was dir vorschwebt und ich schaue was ich daraus machen kann.</p>
+    <div class="section-head"><h2>Ganz nach deinen Wünschen</h2></div>
+    <div class="panel" style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;">
+      <p style="font-size:15px;color:var(--muted);line-height:1.7;margin:0;">Du hast eine Idee im Kopf und ich versuche sie zum Leben zu erwecken. Farbe, Duft, Form, Anlass – sag mir was dir vorschwebt und ich schaue was ich daraus machen kann.</p>
       <a class="btn btn-gold" href="#kontakt" style="white-space:nowrap">Wunsch mitteilen</a>
     </div>
   </section>
 
-  <!-- KONTAKT -->
   <section class="section" id="kontakt">
-    <div class="section-head">
-      <h2>Kontakt</h2>
-    </div>
+    <div class="section-head"><h2>Kontakt</h2></div>
     <div class="contact-grid">
       <div class="panel">
         <h3>Direkt melden</h3>
@@ -1058,20 +663,12 @@
         <p><a href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">@kerzenstudio.hannah</a></p>
         <p style="margin-top:12px">Oder per Mail:</p>
         <p><a href="mailto:kerzenstudio.hannah@gmail.com">kerzenstudio.hannah@gmail.com</a></p>
-        <p style="margin-top:16px; font-size:13px; opacity:.8">
-          Kein Versand – Abholung in Erfurt oder Lieferung in der Umgebung auf Anfrage.
-        </p>
+        <p style="margin-top:16px;font-size:13px;opacity:.8">Kein Versand – Abholung in Erfurt oder persönliche Übergabe in der Umgebung auf Anfrage.</p>
       </div>
       <div class="panel">
         <h3>Nachricht schicken</h3>
-        <div class="form-group">
-          <label>Dein Name</label>
-          <input type="text" placeholder="z.B. Laura">
-        </div>
-        <div class="form-group">
-          <label>E-Mail oder Instagram</label>
-          <input type="text" placeholder="damit ich dir antworten kann">
-        </div>
+        <div class="form-group"><label>Dein Name</label><input type="text" placeholder="z.B. Laura"></div>
+        <div class="form-group"><label>E-Mail oder Instagram</label><input type="text" placeholder="damit ich dir antworten kann"></div>
         <div class="form-group">
           <label>Worum geht es?</label>
           <select>
@@ -1082,34 +679,23 @@
             <option>Sonstiges</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea placeholder="Was interessiert dich? Welches Produkt? …"></textarea>
-        </div>
-        <button class="btn btn-gold" style="width:100%" onclick="alert('Danke! Diese Funktion wird bald aktiviert. Schreib mir gerne direkt per Instagram oder Mail.')">Nachricht senden</button>
+        <div class="form-group"><label>Nachricht</label><textarea placeholder="Was interessiert dich? Welches Produkt? …"></textarea></div>
+        <button class="btn btn-gold" style="width:100%" onclick="alert('Danke! Schreib mir gerne direkt per Instagram oder Mail.')">Nachricht senden</button>
       </div>
     </div>
   </section>
 
-  <!-- ÜBER -->
   <section class="section" id="about">
-    <div class="section-head">
-      <h2>Über das Studio</h2>
-    </div>
+    <div class="section-head"><h2>Über das Studio</h2></div>
     <div class="panel">
-      <p class="about-text">
-        Hallo, ich bin Hannah – aus Erfurt, mitten in Thüringen. Was als kleines Hobby begann, ist heute meine liebste Art, Kreativität und Handwerk zu verbinden. In meiner Freizeit entstehen hier bei mir zu Hause Kerzen, die mehr sind als nur Licht: jede einzeln gegossen, mit Liebe zum Detail und ganz ohne Massenproduktion. Ich arbeite vorwiegend mit nachhaltigem Sojawachs – vegan, länger brennend und mit einem ruhigeren Flammenbild als herkömmliche Kerzen. Jedes Stück entsteht in kleinen Chargen, wird von Hand gefertigt und mit Sorgfalt verpackt. Kein Stück ist wie das andere – und genau das macht es besonders.
-      </p>
+      <p class="about-text">Hallo, ich bin Hannah – aus Erfurt, mitten in Thüringen. Was als kleines Hobby begann, ist heute meine liebste Art, Kreativität und Handwerk zu verbinden. In meiner Freizeit entstehen hier bei mir zu Hause Kerzen, die mehr sind als nur Licht: jede einzeln gegossen, mit Liebe zum Detail und ganz ohne Massenproduktion. Ich arbeite vorwiegend mit nachhaltigem Sojawachs – vegan, länger brennend und mit einem ruhigeren Flammenbild als herkömmliche Kerzen. Jedes Stück entsteht in kleinen Chargen, wird von Hand gefertigt und mit Sorgfalt verpackt. Kein Stück ist wie das andere – und genau das macht es besonders.</p>
     </div>
   </section>
 
-  <!-- IMPRESSUM -->
   <section class="section" id="impressum">
-    <div class="section-head">
-      <h2>Impressum</h2>
-    </div>
+    <div class="section-head"><h2>Impressum</h2></div>
     <div class="panel">
-      <p style="font-size:14px; color:var(--muted); line-height:1.9">
+      <p style="font-size:14px;color:var(--muted);line-height:1.9">
         Kerzenstudio Hannah<br>
         Hannah Richter<br>
         Theo-Neubauer-Str.<br>
@@ -1129,28 +715,5 @@
   </footer>
 
 </div>
-
-<script>
-  document.querySelectorAll('.slider-wrap').forEach(function(wrap) {
-    var track = wrap.querySelector('.slider-track');
-    var imgs = track.querySelectorAll('img');
-    var dots = wrap.querySelectorAll('.slider-dot');
-    var current = 0;
-    var total = imgs.length;
-
-    function goTo(n) {
-      current = (n + total) % total;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      dots.forEach(function(d, i) {
-        d.classList.toggle('active', i === current);
-      });
-    }
-
-    wrap.querySelector('.prev').addEventListener('click', function() { goTo(current - 1); });
-    wrap.querySelector('.next').addEventListener('click', function() { goTo(current + 1); });
-    dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
-    goTo(0);
-  });
-</script>
 </body>
 </html>
