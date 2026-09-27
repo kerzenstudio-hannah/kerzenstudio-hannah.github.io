@@ -320,9 +320,11 @@
     /* Real images once added */
     .card-img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: auto;
+      max-height: 320px;
+      object-fit: contain;
       display: block;
+      background: var(--panel2);
     }
 
     /* ── STATUS BADGE ── */
@@ -536,6 +538,65 @@
 
     /* ── IMPRESSUM ── */
     #impressum .panel p { line-height: 1.8; }
+
+    /* ── SLIDER ── */
+    .slider-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--panel2);
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform .35s ease;
+    }
+
+    .slider-track img {
+      min-width: 100%;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(251,247,240,.85);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 2;
+      transition: background .2s;
+    }
+
+    .slider-btn:hover { background: rgba(251,247,240,1); }
+    .slider-btn.prev { left: 8px; }
+    .slider-btn.next { right: 8px; }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+
+    .slider-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.6);
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .slider-dot.active { background: #fff; }
   </style>
 </head>
 <body>
@@ -594,7 +655,12 @@
 
       <!-- Iced Mango Matcha Latte -->
       <div class="card">
-        <img class="card-img" src="images/Mango matcha latte.PNG" alt="Iced Mango Matcha Latte Kerze">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Mango matcha latte.PNG" alt="Iced Mango Matcha Latte"><img src="images/Mango_Matcha_oben.JPG" alt="Iced Mango Matcha Latte"><img src="images/Mango_Matcha_Hinten.JPG" alt="Iced Mango Matcha Latte"><img src="images/Mango_groß.HEIC" alt="Iced Mango Matcha Latte"><img src="images/Mango_klein.HEIC" alt="Iced Mango Matcha Latte"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
@@ -627,7 +693,12 @@
 
       <!-- Iced Matcha Latte -->
       <div class="card">
-        <img class="card-img" src="images/Matcha-Latte.PNG" alt="Iced Matcha Latte Kerze">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Matcha-Latte.PNG" alt="Iced Matcha Latte"><img src="images/Matcha_Latte_groß.HEIC" alt="Iced Matcha Latte"><img src="images/Matcha_Latte_klein.HEIC" alt="Iced Matcha Latte"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
@@ -660,7 +731,12 @@
 
       <!-- Iced Strawberry Matcha Latte -->
       <div class="card">
-        <img class="card-img" src="images/Strawberry matcha latte.PNG" alt="Iced Strawberry Matcha Latte Kerze">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Strawberry matcha latte.PNG" alt="Iced Strawberry Matcha Latte"><img src="images/Strawberry_Matcha_groß.HEIC" alt="Iced Strawberry Matcha Latte"><img src="images/Strawberry_Matcha_klein.HEIC" alt="Iced Strawberry Matcha Latte"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
@@ -693,7 +769,12 @@
 
       <!-- Iced Caramel Latte -->
       <div class="card">
-        <img class="card-img" src="images/Iced_Caramel_Latte.PNG" alt="Iced Caramel Latte Kerze">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Iced_Caramel_Latte.PNG" alt="Iced Caramel Latte"><img src="images/Caramel_groß.HEIC" alt="Iced Caramel Latte"><img src="images/Caramel_klein.HEIC" alt="Iced Caramel Latte"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
@@ -726,7 +807,12 @@
 
       <!-- Iced Coffee Latte -->
       <div class="card">
-        <img class="card-img" src="images/Iced_Coffee_Latte.PNG" alt="Iced Coffee Latte Kerze">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Iced_Coffee_Latte.PNG" alt="Iced Coffee Latte"><img src="images/Iced_Coffee_Latte.JPG" alt="Iced Coffee Latte"><img src="images/Iced_Coffee_Latte2.JPG" alt="Iced Coffee Latte"><img src="images/Iced_Coffee_Latte_3.JPG" alt="Iced Coffee Latte"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
@@ -749,6 +835,80 @@
             <div>
               <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
               <span class="price">Bundle 25 €</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-gold" href="#kontakt">Interesse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Teelichter -->
+      <div class="card">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Teelicht_Übersicht.HEIC" alt="Teelichter"><img src="images/Teelicht_schwimmend.HEIC" alt="Teelichter"><img src="images/Teelicht1.HEIC" alt="Teelichter"><img src="images/Teelicht2.HEIC" alt="Teelichter"><img src="images/Teelicht3.HEIC" alt="Teelichter"><img src="images/Teelicht4.HEIC" alt="Teelichter"><img src="images/Teelicht5.HEIC" alt="Teelichter"><img src="images/Teelicht6.HEIC" alt="Teelichter"><img src="images/Teelicht7.HEIC" alt="Teelichter"><img src="images/Teelicht8.HEIC" alt="Teelichter"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div><div class="slider-dot"></div></div>
+      </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="tags">
+              <span class="tag">Nicht duftend</span>
+              <span class="tag">Schwimmend</span>
+            </div>
+            <span class="status status-available">
+              <span class="status-dot"></span>
+              Verfügbar
+            </span>
+          </div>
+          <div class="prod-name">Teelichter</div>
+          <p class="prod-desc">Kleine Kunstwerke in vielen Formen und Farben – sie können sogar schwimmen! Nicht duftend, dafür umso dekorativer. Auch in größeren Mengen auf Anfrage erhältlich.</p>
+          <div class="meta-row">
+            <span>Viele Formen & Farben</span>
+            <span>Können schwimmen</span>
+            <span>Auf Anfrage individualisierbar</span>
+          </div>
+          <div class="card-footer">
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">1 Stück 1,50 € · 5 Stück 6 € · 10 Stück 11 €</div>
+              <span class="price">20 Stück 20 €</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-gold" href="#kontakt">Interesse</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Geschenkverpackungen -->
+      <div class="card">
+        <div class="slider-wrap">
+        <div class="slider-track"><img src="images/Geschenkverpackungen.HEIC" alt="Geschenkverpackungen"><img src="images/Geschenkverpackungen2.HEIC" alt="Geschenkverpackungen"></div>
+        <button class="slider-btn prev">&#8249;</button>
+        <button class="slider-btn next">&#8250;</button>
+        <div class="slider-dots"><div class="slider-dot active"></div><div class="slider-dot"></div></div>
+      </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="tags">
+              <span class="tag">Geschenk</span>
+              <span class="tag">Verpackung</span>
+            </div>
+            <span class="status status-available">
+              <span class="status-dot"></span>
+              Verfügbar
+            </span>
+          </div>
+          <div class="prod-name">Geschenkverpackungen</div>
+          <p class="prod-desc">Perfekt für besondere Anlässe – deine Kerze kommt liebevoll verpackt und ist direkt verschenkfertig.</p>
+          <div class="meta-row">
+            <span>Verschiedene Designs</span>
+            <span>Ideal zum Verschenken</span>
+          </div>
+          <div class="card-footer">
+            <div>
+              <span class="price">1,50 € pro Stück</span>
             </div>
             <div class="card-actions">
               <a class="btn btn-gold" href="#kontakt">Interesse</a>
@@ -953,5 +1113,28 @@
   </footer>
 
 </div>
+
+<script>
+  document.querySelectorAll('.slider-wrap').forEach(function(wrap) {
+    var track = wrap.querySelector('.slider-track');
+    var imgs = track.querySelectorAll('img');
+    var dots = wrap.querySelectorAll('.slider-dot');
+    var current = 0;
+    var total = imgs.length;
+
+    function goTo(n) {
+      current = (n + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    wrap.querySelector('.prev').addEventListener('click', function() { goTo(current - 1); });
+    wrap.querySelector('.next').addEventListener('click', function() { goTo(current + 1); });
+    dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+    goTo(0);
+  });
+</script>
 </body>
 </html>
