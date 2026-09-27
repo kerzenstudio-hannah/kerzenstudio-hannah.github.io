@@ -19,10 +19,10 @@
       --r: 18px;
       --max: 1100px;
     }
- 
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
- 
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background:
@@ -34,9 +34,9 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
- 
+
     a { color: inherit; text-decoration: none; }
- 
+
     /* ── NAV ── */
     .nav-wrap {
       padding: 14px 18px 0;
@@ -44,7 +44,7 @@
       top: 10px;
       z-index: 50;
     }
- 
+
     nav {
       max-width: var(--max);
       margin: 0 auto;
@@ -58,7 +58,7 @@
       background: rgba(251,247,240,.80);
       backdrop-filter: blur(10px);
     }
- 
+
     .brand {
       display: flex;
       align-items: center;
@@ -68,7 +68,7 @@
       letter-spacing: .8px;
       text-transform: uppercase;
     }
- 
+
     .flame-mark {
       width: 32px; height: 32px;
       border-radius: 50%;
@@ -78,16 +78,16 @@
       place-items: center;
       font-size: 14px;
     }
- 
+
     .nav-links {
       display: flex;
       gap: 20px;
       font-size: 13px;
       color: var(--muted);
     }
- 
+
     .nav-links a:hover { color: var(--text); }
- 
+
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -101,20 +101,20 @@
       white-space: nowrap;
       transition: background .2s;
     }
- 
+
     .nav-cta:hover { background: rgba(185,150,85,.25); }
- 
+
     @media (max-width: 700px) {
       .nav-links { display: none; }
     }
- 
+
     /* ── WRAP ── */
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
       padding: 32px 18px 80px;
     }
- 
+
     /* ── HERO ── */
     .hero {
       margin-top: 28px;
@@ -129,12 +129,12 @@
       gap: 32px;
       align-items: center;
     }
- 
+
     @media (max-width: 680px) {
       .hero { grid-template-columns: 1fr; padding: 30px 22px; }
       .hero-badge { display: none; }
     }
- 
+
     .kicker {
       display: inline-flex;
       align-items: center;
@@ -146,36 +146,36 @@
       border-radius: 999px;
       margin-bottom: 16px;
     }
- 
+
     .dot {
       width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--gold);
       box-shadow: 0 0 10px rgba(185,150,85,.5);
     }
- 
+
     h1 {
       font-size: 44px;
       line-height: 1.06;
       letter-spacing: -.3px;
       margin-bottom: 12px;
     }
- 
+
     @media (max-width: 680px) { h1 { font-size: 34px; } }
- 
+
     .hero-sub {
       font-size: 16px;
       color: var(--muted);
       max-width: 48ch;
       margin-bottom: 24px;
     }
- 
+
     .hero-actions {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
- 
+
     .hero-badge {
       display: flex;
       flex-direction: column;
@@ -188,10 +188,10 @@
       text-align: center;
       white-space: nowrap;
     }
- 
+
     .hero-badge .big { font-size: 32px; font-weight: 700; color: var(--gold); }
     .hero-badge .small { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
- 
+
     /* ── BUTTONS ── */
     .btn {
       display: inline-flex;
@@ -206,45 +206,45 @@
       cursor: pointer;
       transition: transform .15s, box-shadow .15s, background .15s;
     }
- 
+
     .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(20,18,16,.08); }
     .btn:active { transform: translateY(0); }
- 
+
     .btn-gold {
       background: #8a6a2a;
       color: #fff;
       border-color: transparent;
     }
- 
+
     .btn-gold:hover { background: #6e5220; }
- 
+
     .btn-outline {
       background: transparent;
       border-color: var(--gold-border);
       color: var(--text);
     }
- 
+
     /* ── SECTION ── */
     .section { margin-top: 56px; }
- 
+
     .section-head {
       display: flex;
       align-items: baseline;
       gap: 12px;
       margin-bottom: 24px;
     }
- 
+
     h2 {
       font-size: 26px;
       font-weight: 700;
       letter-spacing: -.1px;
     }
- 
+
     .section-note {
       font-size: 13px;
       color: var(--muted);
     }
- 
+
     /* ── DIVIDER ── */
     .divider {
       margin-top: 64px;
@@ -252,13 +252,13 @@
       align-items: center;
       gap: 18px;
     }
- 
+
     .divider-line {
       flex: 1;
       height: 1px;
       background: var(--line);
     }
- 
+
     .divider-label {
       display: flex;
       align-items: center;
@@ -274,14 +274,14 @@
       background: rgba(251,247,240,.8);
       white-space: nowrap;
     }
- 
+
     /* ── PRODUCT GRID ── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 18px;
     }
- 
+
     .card {
       border: 1px solid var(--line);
       border-radius: var(--r);
@@ -291,13 +291,13 @@
       box-shadow: 0 8px 24px rgba(20,18,16,.05);
       transition: transform .18s, box-shadow .18s, border-color .18s;
     }
- 
+
     .card:hover {
       transform: translateY(-3px);
       box-shadow: 0 16px 40px rgba(20,18,16,.10);
       border-color: var(--gold-border);
     }
- 
+
     /* ── IMAGE PLACEHOLDER ── */
     .img-placeholder {
       width: 100%;
@@ -312,11 +312,11 @@
       font-size: 12px;
       letter-spacing: .4px;
     }
- 
+
     .img-placeholder .ph-icon { font-size: 28px; opacity: .5; }
- 
+
     .img-placeholder.tall { height: 280px; }
- 
+
     /* Real images once added */
     .card-img {
       width: 100%;
@@ -324,7 +324,7 @@
       object-fit: cover;
       display: block;
     }
- 
+
     /* ── STATUS BADGE ── */
     .status {
       display: inline-flex;
@@ -337,33 +337,33 @@
       padding: 4px 10px;
       border-radius: 999px;
     }
- 
+
     .status-dot { width: 6px; height: 6px; border-radius: 50%; }
- 
+
     .status-available {
       background: rgba(60,180,80,.10);
       color: #2a7a3a;
     }
     .status-available .status-dot { background: #3cb450; }
- 
+
     .status-request {
       background: rgba(185,150,85,.12);
       color: #7a5f20;
     }
     .status-request .status-dot { background: var(--gold); }
- 
+
     /* ── CARD BODY ── */
     .card-body { padding: 18px 20px 20px; }
- 
+
     .card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
     }
- 
+
     .tags { display: flex; gap: 6px; flex-wrap: wrap; }
- 
+
     .tag {
       font-size: 11px;
       padding: 3px 9px;
@@ -372,21 +372,21 @@
       color: var(--muted);
       background: rgba(255,255,255,.5);
     }
- 
+
     .prod-name {
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 6px;
       line-height: 1.2;
     }
- 
+
     .prod-desc {
       font-size: 13.5px;
       color: var(--muted);
       margin-bottom: 12px;
       line-height: 1.5;
     }
- 
+
     .meta-row {
       display: flex;
       gap: 12px;
@@ -395,9 +395,9 @@
       color: var(--muted);
       margin-bottom: 14px;
     }
- 
+
     .meta-row span { opacity: .75; }
- 
+
     .card-footer {
       display: flex;
       align-items: center;
@@ -405,22 +405,22 @@
       gap: 10px;
       flex-wrap: wrap;
     }
- 
+
     .price {
       font-size: 20px;
       font-weight: 700;
       letter-spacing: -.2px;
     }
- 
+
     .card-actions { display: flex; gap: 8px; }
- 
+
     /* ── GALLERY GRID ── */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 14px;
     }
- 
+
     .gallery-item {
       border: 1px solid var(--line);
       border-radius: var(--r);
@@ -428,39 +428,39 @@
       overflow: hidden;
       transition: transform .18s, border-color .18s;
     }
- 
+
     .gallery-item:hover {
       transform: translateY(-3px);
       border-color: var(--gold-border);
     }
- 
+
     .gallery-caption {
       padding: 12px 14px 14px;
     }
- 
+
     .gallery-name {
       font-size: 14px;
       font-weight: 650;
       margin-bottom: 4px;
     }
- 
+
     .gallery-desc {
       font-size: 12.5px;
       color: var(--muted);
       line-height: 1.45;
     }
- 
+
     /* ── CONTACT ── */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
- 
+
     @media (max-width: 620px) {
       .contact-grid { grid-template-columns: 1fr; }
     }
- 
+
     .panel {
       border: 1px solid var(--line);
       border-radius: var(--r);
@@ -468,14 +468,14 @@
       backdrop-filter: blur(4px);
       padding: 24px 26px;
     }
- 
+
     .panel h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
     .panel p { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .panel a { color: var(--gold); border-bottom: 1px solid var(--gold-border); }
- 
+
     /* ── CONTACT FORM ── */
     .form-group { margin-bottom: 14px; }
- 
+
     .form-group label {
       display: block;
       font-size: 12px;
@@ -485,7 +485,7 @@
       margin-bottom: 5px;
       text-transform: uppercase;
     }
- 
+
     .form-group input,
     .form-group textarea,
     .form-group select {
@@ -500,15 +500,15 @@
       outline: none;
       transition: border-color .2s;
     }
- 
+
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--gold-border);
     }
- 
+
     .form-group textarea { resize: vertical; min-height: 90px; }
- 
+
     /* ── ABOUT ── */
     .about-text {
       font-size: 14.5px;
@@ -516,7 +516,7 @@
       line-height: 1.75;
       max-width: 72ch;
     }
- 
+
     /* ── FOOTER ── */
     footer {
       margin-top: 72px;
@@ -530,16 +530,16 @@
       font-size: 13px;
       color: var(--muted);
     }
- 
+
     .foot-links { display: flex; gap: 16px; }
     .foot-links a:hover { color: var(--text); }
- 
+
     /* ── IMPRESSUM ── */
     #impressum .panel p { line-height: 1.8; }
   </style>
 </head>
 <body>
- 
+
 <div class="nav-wrap">
   <nav>
     <div class="brand">
@@ -554,9 +554,9 @@
     <a class="nav-cta" href="#kontakt">Anfragen →</a>
   </nav>
 </div>
- 
+
 <div class="wrap">
- 
+
   <!-- HERO -->
   <section class="hero">
     <div>
@@ -582,118 +582,118 @@
       <span class="small" style="margin-top:10px">Vegan · Nachhaltig</span>
     </div>
   </section>
- 
+
   <!-- VERFÜGBAR -->
   <section class="section" id="verfuegbar">
     <div class="section-head">
       <h2>Sofort verfügbar</h2>
       <span class="section-note">Frisch gegossen & direkt zu haben – solange der Vorrat reicht</span>
     </div>
- 
+
     <div class="grid">
- 
-      <!-- Produkt 1 -->
+
+      <!-- Iced Mango Matcha Latte -->
       <div class="card">
-        <!-- Foto hier einfügen: <img class="card-img" src="dein-foto.jpg" alt="Espresso Mini"> -->
-        <div class="img-placeholder">
-          <span class="ph-icon">🕯</span>
-          <span>Foto folgt</span>
-        </div>
+        <img class="card-img" src="images/Mango_matcha_latte.PNG" alt="Iced Mango Matcha Latte Kerze">
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
-              <span class="tag">Warm</span>
-              <span class="tag">Coffee · Vanille</span>
+              <span class="tag">Fruchtig</span>
+              <span class="tag">Mango · Matcha</span>
             </div>
             <span class="status status-available">
               <span class="status-dot"></span>
               Verfügbar
             </span>
           </div>
-          <div class="prod-name">Espresso Mini</div>
-          <p class="prod-desc">Vollmundiger Kaffeegeruch mit sanfter Vanillenote. Wie ein frischer Espresso am Morgen.</p>
+          <div class="prod-name">Iced Mango Matcha Latte</div>
+          <p class="prod-desc">Fruchtig-süßer Mangoduft trifft auf einen leichten Hauch Matcha. Wie ein Sommerdrink zum Anzünden.</p>
           <div class="meta-row">
-            <span>ca. 70 g</span>
-            <span>ca. 15 h Brenndauer</span>
+            <span>Lange Brenndauer</span>
+            <span>Angenehm leichter Duft</span>
             <span>100 % Sojawachs</span>
           </div>
           <div class="card-footer">
-            <span class="price">5,90 €</span>
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
+              <span class="price">Bundle 25 €</span>
+            </div>
             <div class="card-actions">
               <a class="btn btn-gold" href="#kontakt">Interesse</a>
             </div>
           </div>
         </div>
       </div>
- 
-      <!-- Produkt 2 -->
+
+      <!-- Iced Matcha Latte -->
       <div class="card">
-        <div class="img-placeholder">
-          <span class="ph-icon">💐</span>
-          <span>Foto folgt</span>
-        </div>
+        <img class="card-img" src="images/Matcha_Latte.PNG" alt="Iced Matcha Latte Kerze">
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
-              <span class="tag">Limited</span>
-              <span class="tag">Handarbeit</span>
+              <span class="tag">Teeig</span>
+              <span class="tag">Matcha</span>
             </div>
             <span class="status status-available">
               <span class="status-dot"></span>
               Verfügbar
             </span>
           </div>
-          <div class="prod-name">Kerzenstrauß Sommeredition</div>
-          <p class="prod-desc">Handgefertigter Strauß aus Sojawachs. Dezent duftend, dekorativ – ein echtes Statement als Geschenk.</p>
+          <div class="prod-name">Iced Matcha Latte</div>
+          <p class="prod-desc">Erdiger, leicht herber Matchaduft – ruhig, minimalistisch und unglaublich entspannend.</p>
           <div class="meta-row">
-            <span>Limited Edition</span>
-            <span>Handarbeit</span>
-            <span>Nachhaltig</span>
+            <span>Lange Brenndauer</span>
+            <span>Angenehm leichter Duft</span>
+            <span>100 % Sojawachs</span>
           </div>
           <div class="card-footer">
-            <span class="price">49,00 €</span>
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
+              <span class="price">Bundle 25 €</span>
+            </div>
             <div class="card-actions">
               <a class="btn btn-gold" href="#kontakt">Interesse</a>
             </div>
           </div>
         </div>
       </div>
- 
-      <!-- Produkt 3 -->
+
+      <!-- Iced Strawberry Matcha Latte -->
       <div class="card">
-        <div class="img-placeholder">
-          <span class="ph-icon">✨</span>
-          <span>Foto folgt</span>
-        </div>
+        <img class="card-img" src="images/Strawberry_matcha_latte.PNG" alt="Iced Strawberry Matcha Latte Kerze">
         <div class="card-body">
           <div class="card-top">
             <div class="tags">
-              <span class="tag">Personalisiert</span>
+              <span class="tag">Fruchtig</span>
+              <span class="tag">Erdbeere · Matcha</span>
             </div>
             <span class="status status-available">
               <span class="status-dot"></span>
               Verfügbar
             </span>
           </div>
-          <div class="prod-name">Personalisierte Kerze</div>
-          <p class="prod-desc">Wunschfarbe, persönliche Botschaft, individueller Duft. Ideal für Geburtstage und besondere Momente.</p>
+          <div class="prod-name">Iced Strawberry Matcha Latte</div>
+          <p class="prod-desc">Süße Erdbeere trifft auf frischen Matcha – fruchtig, verspielt und wunderbar sommerlich.</p>
           <div class="meta-row">
-            <span>Sojawachs</span>
-            <span>Farbe wählbar</span>
-            <span>Botschaft wählbar</span>
+            <span>Lange Brenndauer</span>
+            <span>Angenehm leichter Duft</span>
+            <span>100 % Sojawachs</span>
           </div>
           <div class="card-footer">
-            <span class="price">15,00 €</span>
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:2px">Klein 10 € · Groß 15 €</div>
+              <span class="price">Bundle 25 €</span>
+            </div>
             <div class="card-actions">
               <a class="btn btn-gold" href="#kontakt">Interesse</a>
             </div>
           </div>
         </div>
       </div>
- 
+
     </div>
   </section>
- 
+
   <!-- DIVIDER -->
   <div class="divider">
     <div class="divider-line"></div>
@@ -703,16 +703,16 @@
     </div>
     <div class="divider-line"></div>
   </div>
- 
+
   <!-- ATELIER -->
   <section class="section" id="atelier">
     <div class="section-head">
       <h2>Mein Atelier</h2>
       <span class="section-note">Bereits verkauft und auf Anfrage neu herstellbar – schau dich um</span>
     </div>
- 
+
     <div class="gallery">
- 
+
       <!-- Galerie 1 -->
       <div class="gallery-item">
         <div class="img-placeholder tall">
@@ -731,7 +731,7 @@
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
- 
+
       <!-- Galerie 2 -->
       <div class="gallery-item">
         <div class="img-placeholder tall">
@@ -750,7 +750,7 @@
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
- 
+
       <!-- Galerie 3 -->
       <div class="gallery-item">
         <div class="img-placeholder tall">
@@ -769,7 +769,7 @@
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
- 
+
       <!-- Galerie 4 -->
       <div class="gallery-item">
         <div class="img-placeholder tall">
@@ -788,11 +788,11 @@
           <a class="btn btn-outline" href="#kontakt" style="margin-top:10px;font-size:12.5px;padding:8px 14px">Anfragen</a>
         </div>
       </div>
- 
+
     </div>
- 
+
   </section>
- 
+
   <!-- WÜNSCHE -->
   <section class="section" id="wuensche">
     <div class="section-head">
@@ -803,7 +803,7 @@
       <a class="btn btn-gold" href="#kontakt" style="white-space:nowrap">Wunsch mitteilen</a>
     </div>
   </section>
- 
+
   <!-- KONTAKT -->
   <section class="section" id="kontakt">
     <div class="section-head">
@@ -848,7 +848,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- ÜBER -->
   <section class="section" id="about">
     <div class="section-head">
@@ -860,7 +860,7 @@
       </p>
     </div>
   </section>
- 
+
   <!-- IMPRESSUM -->
   <section class="section" id="impressum">
     <div class="section-head">
@@ -876,7 +876,7 @@
       </p>
     </div>
   </section>
- 
+
   <footer>
     <span>© 2026 Kerzenstudio Hannah</span>
     <div class="foot-links">
@@ -885,8 +885,7 @@
       <a href="https://instagram.com/kerzenstudio.hannah" target="_blank" rel="noreferrer">Instagram</a>
     </div>
   </footer>
- 
+
 </div>
 </body>
 </html>
- 
