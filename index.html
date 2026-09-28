@@ -122,14 +122,28 @@
       backdrop-filter: blur(6px);
       box-shadow: 0 10px 30px rgba(20,18,16,.05);
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: center;
-      padding: 48px 36px;
+      grid-template-columns: 45% 55%;
+      gap: 0;
+      align-items: stretch;
+      overflow: hidden;
+      min-height: 600px;
     }
 
     @media (max-width: 680px) {
-      .hero { grid-template-columns: 1fr; padding: 30px 22px; }
+      .hero {
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      background: rgba(251,247,240,.82);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 30px rgba(20,18,16,.05);
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 0;
+      align-items: stretch;
+      overflow: hidden;
+      min-height: 600px;
+    }
       .hero > div:last-child { display: none; }
     }
 
@@ -463,7 +477,7 @@
 <div class="wrap">
 
   <section class="hero">
-    <div>
+    <div style="padding: 48px 48px; display:flex; flex-direction:column; justify-content:center;">
       <div class="kicker"><span class="dot"></span>Kleines Studio · Erfurt · Handarbeit</div>
       <h1>Handgegossene<br>Kerzen & Sträuße</h1>
       <p class="hero-sub">Jedes Stück einzeln gefertigt – mit Liebe, aus Erfurt.</p>
@@ -475,8 +489,8 @@
         <a class="btn btn-outline" href="#atelier">Atelier ansehen</a>
       </div>
     </div>
-    <div>
-      <img src="images/kerzenstrauss.jpg" alt="Kerzenstrauß" style="width:260px;height:260px;object-fit:contain;display:block;border-radius:var(--r);">
+    <div style="overflow:hidden; border-radius: 0 var(--r) var(--r) 0;">
+      <img src="images/kerzenstrauss.jpg" alt="Kerzenstrauß" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
     </div>
   </section>
 
