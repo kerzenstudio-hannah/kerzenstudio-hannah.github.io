@@ -455,6 +455,63 @@
     .slider-dots { position: absolute; bottom: 7px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; }
     .slider-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; }
     .slider-dot.on { background: #fff; }
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .hero {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+      }
+      .hero > div:last-child { display: none !important; }
+      .hero > div:first-child { padding: 32px 24px !important; }
+      h1 { font-size: 32px !important; }
+
+      /* Nav */
+      .nav-wrap { padding: 10px 12px 0; }
+      .nav-cta { font-size: 11px; padding: 6px 10px; }
+
+      /* Grid - single column */
+      .grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Gallery - single column */
+      .gallery {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Gallery images - less zoom */
+      .gallery-item img {
+        height: 280px !important;
+        object-position: center center !important;
+      }
+
+      /* Slider height */
+      .slider { height: 260px !important; }
+      .slider-track { height: 260px !important; }
+      .slider-track img { height: 260px !important; }
+
+      /* Card image */
+      .card-img { height: 200px !important; }
+
+      /* Contact grid */
+      .contact-grid { grid-template-columns: 1fr !important; }
+
+      /* Wünsche panel */
+      .panel[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Section padding */
+      .wrap { padding: 20px 14px 60px; }
+
+      /* Buttons */
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+
+      /* Section heads */
+      .section-head { flex-direction: column; gap: 4px; }
+    }
   </style>
 </head>
 <body>
